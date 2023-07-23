@@ -6586,7 +6586,7 @@ textarea.form-control-lg {
     justify-content: center;
     width: 15%;
     padding: 0;
-    color: #fff;
+    color: #b3b1b1;
     text-align: center;
     background: none;
     border: 0;
@@ -6604,7 +6604,7 @@ textarea.form-control-lg {
 .carousel-control-prev:hover, .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-    color: #fff;
+    color: #b3b1b1;
     text-decoration: none;
     outline: 0;
     opacity: 0.9;
@@ -12604,7 +12604,7 @@ header.masthead-group {
 }
 
 header.masthead-contact {
-    background-image: url('../assets/img/headers/4.jpg');
+    background-image: url('../assets/img/headers/5.png');
     background-size: cover;
     background-position: center;
     height: 60vh;
