@@ -2930,6 +2930,33 @@ textarea.form-control-lg {
     border-bottom-left-radius: 0;
 }
 
+/*슬라이드 사진 */
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.first {
+    opacity: 1;
+}
+
+
 .valid-feedback {
     display: none;
     width: 100%;
@@ -12547,27 +12574,6 @@ header.masthead {
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-}
-
-.header.masthead .slider {
-    position: relative;
-    overflow: hidden;
-    height: 400px; /* 슬라이드 높이 지정 */
-}
-
-.header.masthead .slider img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* 배경 이미지가 화면에서 최상위에 위치하도록 */
-    opacity: 0; /* 초기에는 모든 이미지를 숨김 */
-    transition: opacity 0.3s ease-out; /* opacity 값 변경 시 자연스러운 효과를 위해 트랜지션 추가 */
-}
-
-.header.masthead .slider img.active {
-    opacity: 1; /* 활성화된 이미지는 보이도록 함 */
 }
 
 header.masthead .masthead-subheading {

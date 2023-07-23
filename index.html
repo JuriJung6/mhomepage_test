@@ -43,14 +43,13 @@
         </div>
     </nav>
     <!-- Masthead-->
-    <header class="header masthead">
-        <div class="slider">
-            <img src="assets/img/main/1.jpg" class="active">
-            <img src="assets/img/main/2.jpg">
-            <img src="assets/img/main/3.jpg">
+    <header>
+        <div class="slideshow-container">
+            <div class="slideshow-image first" style="background-image: url('assets/img/main/1.jpg');"></div>
+            <div class="slideshow-image" style="background-image: url('assets/img/main/2.jpg');"></div>
+            <div class="slideshow-image" style="background-image: url('assets/img/main/3.jpg');"></div>
         </div>
-    </header>
-    <header class="masthead">
+    <class="masthead">
         <div class="container">
             <div class="masthead-subheading">Welcome To MACEV LTD.!</div>
             <div class="masthead-heading text-uppercase">My Astonishing Customized Electric Vehicle</div>
@@ -692,17 +691,6 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!--    백그라운드 이미지 슬라이드-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.header.masthead .slider').slick({
-                dots: true, /* 이미지 번호 표시할 동그라미 렌더링 여부 */
-                autoplay: true, /* 자동 재생 여부 */
-                autoplaySpeed: 5000, /* 자동 재생 시간(밀리초) */
-                speed: 500 /* 이미지 전환 시간(밀리초) */
-            });
-        });
-    </script>
+
 </body>
 </html>

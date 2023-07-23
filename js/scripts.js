@@ -54,3 +54,26 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+// Slide background images
+let slideIndex = 0;
+const slideshowImages = document.querySelectorAll('.slideshow-image');
+
+setInterval(function() {
+  // Increment slideIndex
+  slideIndex++;
+
+  // Reset slideIndex to 0 after reaching max number of images
+  if (slideIndex === slideshowImages.length) {
+    slideIndex = 0;
+  }
+
+  // Fade the current image out
+  for (let i = 0; i < slideshowImages.length; i++) {
+    slideshowImages[i].style.opacity = 0;
+  }
+
+  // Fade the next image in
+  slideshowImages[slideIndex].style.opacity = 1;
+}, 5000); // Change 5000 to adjust the interval time in milliseconds
+
+
