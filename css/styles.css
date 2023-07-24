@@ -12569,14 +12569,15 @@ header.masthead {
     /*background-image: url("../assets/img/headers/1.jpg");*/
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
 }
 
 
 header.masthead-service {
     background-image: url('../assets/img/headers/1.jpg');
-    background-size: cover;
+    background-size: cover, auto 100%;
+    background-repeat: no-repeat;
     background-position: center;
     height: 60vh;
 }
@@ -12591,7 +12592,8 @@ header.masthead-about {
 
 header.masthead-project {
     background-image: url('../assets/img/headers/3.jpg');
-    background-size: cover;
+    background-size: cover, auto 100%;
+    background-repeat: no-repeat;
     background-position: center;
     height: 60vh;
 }
