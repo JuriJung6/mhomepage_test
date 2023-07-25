@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Modal</title>
+    <!-- Favicon-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/modals/">
+</head>
+
+<style>.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+}
+
+.bd-mode-toggle {
+    z-index: 1500;
+}</style>
+<!-- Custom styles for this template -->
+<link href="css/modal.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog"
+     id="modalChoice">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-3 shadow">
+            <div class="modal-body p-4 text-center">
+                <h5 class="mb-0">계속 진행하려면 귀하의 동의가 필요합니다.</h5>
+                <p class="mb-0">당사는 고객님이 사이트를 보다 원활하게 이용할 수 있도록 개인정보 및 위치를 수집 합니다. 자세한 정보는 <a href="#termdetail"
+                                                                                              class="open-modal">개인정보
+                    보호정책 및 위치정보와 쿠키 이용약관</a>을 참조하십시오. 고객님께서는 본 항목에 동의함으로써 본인이 제공하는 개인정보의 수집, 이용 및 이를 제3자에게 제공하는 것에 동의하시는
+                    것으로 간주됩니다. 동의하지
+                    않으실 경우, 서비스를 이용하실 수 없습니다. 감사합니다.</p>
+            </div>
+            <div class="modal-footer flex-nowrap p-0">
+                <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0"
+                        data-bs-dismiss="modal">거부
+                </button>
+                <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end">
+                    <strong>동의하고 회원가입하기</strong></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<div class="modal" id="termdetail">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">개인정보 보호정책 및 위치정보와 쿠키 이용약관</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                본사는 개인정보 보호정책을 갱신하고 개인정보 취급 시 이용자의 권리와 프라이버시를 보호하기 위해 최선을 다 합니다. 수집하는 개인정보 항목은 성명, 연락처(휴대폰 번호), 차량 기어종류,
+                스마트폰 내 위치정보 수집 기능(GPS, Wi-Fi, 기지국 식별 등), 쿠키 입니다. 수집목적 및 이용목적은 고객에게 최적화된 대리기사님 배정 서비스 제공하고 고객의 서비스 이용 기록
+                및 추적을 위해서입니다.
+                이용자는 위치정보 수집에 대한 동의를 거부할 수 있습니다. 단, 이 경우 대리운전 서비스 이용이 제한됩니다. 이용자는 정보 이용에 대한 동의를 언제든지 철회할 수 있습니다. 개인정보
+                수집방법은 고객이 사이트에 직접 입력한 정보를 수집합니다. 이용자 동의 없이 개인정보를 외부에 제공하지 않습니다. 법령에 규정된 경우, 수사 등의 목적으로 공공기관 및 법정기관에 제공할
+                수 있습니다. 개인정보 보관기간운 서비스를 이용한 마지막 일로부터 3년이며 개인정보 수집 및 이용목적이 달성된 경우 별도의 통보없이 파기합니다. 단, 법령에서 정한 경우에는 그에 따르며,
+                회원탈퇴 등 이용자의 요청 시 지체 없이 파기됩니다.
+                개인정보 파기절차 및 방법은 내부 방침에 따라 파기기한에 따라 즉시 파기합니다. 이용자 권리와 의무는 이용자는 언제든지 개인정보 열람, 정정, 삭제 등의 요구를 할 수 있으며, 이를 위해
+                '개인정보 관리책임업체'에게 팩스나 이메일 등 방법으로 요청할 수 있습니다. 개인정보 취급자와 관리는 개인정보 관리책임업체를 선정하여 취급합니다.
+                취급자는 실수나 누설을 방지하기 위해 노력합니다. 개인정보보호책임 업체명: 주식회사 유비베스트 팩스: 0303-3442-6663 이메일: ubbest@naver.com
+            </div>
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-primary" data-dismiss="modal">닫기</button>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+<script>
+    const termdetailModal = document.getElementById('termdetail');
+    const openTermdetail = document.querySelector('.open-modal');
+    openTermdetail.addEventListener('click', (event) => {
+        event.preventDefault();
+        termdetailModal.style.display = 'block';
+    });
+    window.addEventListener('click', (event) => {
+        if (event.target === termdetailModal) {
+            termdetailModal.style.display = 'none';
+        }
+    });
+</script>
+
+</div>
+</body>
+</html>
