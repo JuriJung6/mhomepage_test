@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -94,6 +94,18 @@
 </head>
 
 <body>
+<script>
+$(document).ready(function() {
+    $("#modalChoice button:contains('동의하고 회원가입하기')").click(function() {
+        window.location = "signup/";
+    });
+    $("#modalChoice button:contains('거부')").click(function() {
+        $('#modalChoice').modal('hide');
+        alert("서비스를 이용 할 수 없습니다");
+    });
+});
+</script>
+
 <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog"
      id="modalChoice">
     <div class="modal-dialog" role="document">
@@ -147,19 +159,34 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script>
-    const termdetailModal = document.getElementById('termdetail');
-    const openTermdetail = document.querySelector('.open-modal');
-    openTermdetail.addEventListener('click', (event) => {
-        event.preventDefault();
-        termdetailModal.style.display = 'block';
-    });
-    window.addEventListener('click', (event) => {
-        if (event.target === termdetailModal) {
-            termdetailModal.style.display = 'none';
-        }
+    $(function() {
+        var termdetailModal = $('#termdetail');
+        var openTermdetail = $('.open-modal');
+
+        // 모달창 열기 이벤트 등록
+        openTermdetail.on('click', function(event) {
+            event.preventDefault();
+            termdetailModal.show();
+        });
+
+        // 모달 영역 외부 클릭 시 모달창 닫기
+        $(window).on('click', function(event) {
+            if (event.target === termdetailModal[0]) {
+                termdetailModal.hide();
+            }
+        });
+
+        // 모달 속성 스크롤 로직 (옵션)
+        termdetailModal.on('show.bs.modal', function() {
+            $('body').css('overflow', 'hidden');
+        }).on('hide.bs.modal', function() {
+            $('body').css('overflow', '');
+        });
     });
 </script>
+
 
 </div>
 </body>
