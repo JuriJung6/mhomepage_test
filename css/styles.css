@@ -12575,7 +12575,8 @@ header.masthead {
 
 
 header.masthead-service {
-    background-image: url('../assets/img/headers/1.jpg');
+    /*background-color: #aaaaaa;*/
+    background-image: url('../assets/img/headers/bg.jpeg');
     background-size: cover, auto 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -12584,14 +12585,14 @@ header.masthead-service {
 
 
 header.masthead-about {
-    background-image: url('../assets/img/headers/2.jpg');
+    background-image: url('../assets/img/headers/bg.jpeg');
     background-size: cover;
     background-position: center;
     height: 60vh;
 }
 
 header.masthead-project {
-    background-image: url('../assets/img/headers/3.jpg');
+    background-image: url('../assets/img/headers/bg.jpeg');
     background-size: cover, auto 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -12599,14 +12600,14 @@ header.masthead-project {
 }
 
 header.masthead-group {
-    background-image: url('../assets/img/headers/4.jpg');
+    background-image: url('../assets/img/headers/bg.jpeg');
     background-size: cover;
     background-position: center;
     height: 60vh;
 }
 
 header.masthead-contact {
-    background-image: url('../assets/img/headers/5.png');
+    background-image: url('../assets/img/headers/bg.jpeg');
     background-size: cover;
     background-position: center;
     height: 60vh;
